@@ -1,0 +1,488 @@
+```html id="5tzwm8"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palz Food Court</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial,sans-serif;
+    }
+
+    body{
+      background:white;
+      color:#222;
+      line-height:1.6;
+    }
+
+    .hero{
+      height:100vh;
+      background:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1600&auto=format&fit=crop') center/cover;
+      position:relative;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:white;
+    }
+
+    .overlay{
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.6);
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:60px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:22px;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      padding:15px 30px;
+      border:none;
+      border-radius:10px;
+      cursor:pointer;
+      font-size:16px;
+      margin:10px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+    }
+
+    .primary{
+      background:orange;
+      color:white;
+    }
+
+    .secondary{
+      background:transparent;
+      border:2px solid white;
+      color:white;
+    }
+
+    section{
+      padding:80px 10%;
+    }
+
+    .title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .title h2{
+      font-size:40px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:white;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 5px 20px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .card img{
+      width:100%;
+      height:250px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:20px;
+    }
+
+    .price{
+      color:orange;
+      font-weight:bold;
+      margin-top:10px;
+    }
+
+    .about{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:center;
+    }
+
+    .about img{
+      width:100%;
+      border-radius:20px;
+      height:400px;
+      object-fit:cover;
+    }
+
+    .testimonial-section{
+      background:#f4f4f4;
+    }
+
+    .testimonial-card{
+      background:white;
+      padding:30px;
+      border-radius:20px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .booking-section{
+      background:#111;
+      color:white;
+      text-align:center;
+    }
+
+    form{
+      max-width:600px;
+      margin:auto;
+    }
+
+    input{
+      width:100%;
+      padding:15px;
+      margin-bottom:20px;
+      border:none;
+      border-radius:10px;
+      font-size:16px;
+    }
+
+    footer{
+      background:#000;
+      color:white;
+      padding:60px 10%;
+    }
+
+    .footer-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:40px;
+    }
+
+    .footer-column h3{
+      margin-bottom:20px;
+      font-size:24px;
+      color:orange;
+    }
+
+    .footer-column p{
+      margin-bottom:10px;
+      color:#ccc;
+    }
+
+    .footer-bottom{
+      text-align:center;
+      margin-top:40px;
+      border-top:1px solid #333;
+      padding-top:20px;
+      color:#999;
+    }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:42px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+
+      .about{
+        grid-template-columns:1fr;
+      }
+
+      .title h2{
+        font-size:32px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- HERO SECTION -->
+
+  <section class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+      <h1>PALZ FOOD COURT</h1>
+
+      <p>Delicious Meals • Fast Service • Kireka Kampala</p>
+
+      <button class="btn primary">Order on WhatsApp</button>
+
+      <button class="btn secondary">View Menu</button>
+
+    </div>
+
+  </section>
+
+
+  <!-- POPULAR MEALS -->
+
+  <section>
+
+    <div class="title">
+      <h2>Popular Meals</h2>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+
+          <h3>Chicken & Chips</h3>
+
+          <p class="price">UGX 18,000</p>
+
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+
+          <h3>Rolex Special</h3>
+
+          <p class="price">UGX 7,000</p>
+
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+
+          <h3>BBQ Platter</h3>
+
+          <p class="price">UGX 25,000</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT US -->
+
+  <section>
+
+    <div class="title">
+      <h2>About Us</h2>
+    </div>
+
+    <div class="about">
+
+      <div>
+
+        <h2>Welcome To Palz Food Court</h2>
+
+        <br>
+
+        <p>
+          Palz Food Court is one of Kireka’s favorite food destinations,
+          serving delicious meals, fast food, BBQ, local dishes, and drinks
+          in a clean and comfortable environment.
+        </p>
+
+        <br>
+
+        <p>
+          We are dedicated to providing quality meals, excellent customer
+          service, and memorable dining experiences.
+        </p>
+
+        <br>
+
+        <p>📍 Kireka, Kampala Uganda</p>
+
+        <p>📞 +256 703 936240</p>
+
+      </div>
+
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop">
+
+    </div>
+
+  </section>
+
+
+  <!-- TESTIMONIALS -->
+
+  <section class="testimonial-section">
+
+    <div class="title">
+      <h2>What Customers Say</h2>
+    </div>
+
+    <div class="cards">
+
+      <div class="testimonial-card">
+
+        <p>
+          “Amazing food and excellent customer service. Highly recommended.”
+        </p>
+
+        <br>
+
+        <h4>- Customer Review</h4>
+
+      </div>
+
+      <div class="testimonial-card">
+
+        <p>
+          “The meals are delicious and affordable. Great atmosphere too.”
+        </p>
+
+        <br>
+
+        <h4>- Happy Customer</h4>
+
+      </div>
+
+      <div class="testimonial-card">
+
+        <p>
+          “One of the best food places in Kireka. Fast service and tasty meals.”
+        </p>
+
+        <br>
+
+        <h4>- Visitor</h4>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- TABLE BOOKING -->
+
+  <section class="booking-section">
+
+    <div class="title">
+      <h2>Reserve a Table</h2>
+    </div>
+
+    <p style="margin-bottom:40px;">
+      Book your table and enjoy delicious meals with friends and family.
+    </p>
+
+    <form>
+
+      <input type="text" placeholder="Your Name">
+
+      <input type="number" placeholder="Phone Number">
+
+      <input type="date">
+
+      <button class="btn primary">Reserve Now</button>
+
+    </form>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-container">
+
+      <div class="footer-column">
+
+        <h3>Palz Food Court</h3>
+
+        <p>
+          Delicious meals, quality service, and memorable dining experiences
+          in Kireka Kampala.
+        </p>
+
+      </div>
+
+      <div class="footer-column">
+
+        <h3>Contact</h3>
+
+        <p>📍 Kireka, Kampala Uganda</p>
+
+        <p>📞 +256 703 936240</p>
+
+        <p>✉ info@palzfoodcourt.com</p>
+
+      </div>
+
+      <div class="footer-column">
+
+        <h3>Services</h3>
+
+        <p>Restaurant Dining</p>
+
+        <p>Fast Food</p>
+
+        <p>BBQ & Grills</p>
+
+        <p>Takeaway Orders</p>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 Palz Food Court. All Rights Reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
+```
